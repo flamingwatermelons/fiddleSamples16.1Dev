@@ -9,41 +9,41 @@
 <div id="container">
         <div id="formContainer">
             <p style="display: inline-block">Measurement units</p>
-            <input type="radio" name="radioMeasurement" id="radioMetric" value="metric" onchange="radioChange()" checked="">
+            <input type="radio" name="radioMeasurement" id="radioMetric" value="metric" onchange="radioChange()" checked=""></input>
             <label for="radioM">metric</label>
-            <input type="radio" name="radioMeasurement" id="radioImperial" value="imperial" onchange="radioChange()">
+            <input type="radio" name="radioMeasurement" id="radioImperial" value="imperial" onchange="radioChange()"></input>
             <label for="radioI">imperial</label>
 
             <div id="mainInfo">
                 <div class="element" style="margin-right: 40px;">
                     <label for="client">Client</label>
-                    <input id="clientName" type="text" name="client">
-                </input></div>
+                    <input id="clientName" type="text" name="client"></input>
+                </div>
 
                 <div class="element" style="margin-right: 40px;">
                     <label for="address">Delivery address</label>
-                    <input id="deliveryAddress" name="address">
-                </input></div>
+                    <input id="deliveryAddress" name="address"></input>
+                </div>
                 <div class="element">
                     <label for="pricem3">Price per cubic meter</label>
-                    <input id="price" name="pricem3">
-                </input></div>
+                    <input id="price" name="pricem3"></input>
+                </div>
             </div>
 
             <div id="client">
                 <div class="element" style="margin-right: 40px;">
                     <label for="mail">Contact email</label>
-                    <input id="clientMail" name="mail">
-                </input></div>
+                    <input id="clientMail" name="mail"></input>
+                </div>
 
                 <div class="element" style="margin-right: 40px;">
                     <label for="date">Delivery date</label>
-                    <input id="deliveryDate" name="date">
-                </input></div>
+                    <input id="deliveryDate" name="date"></input>
+                </div>
                 <div class="element">
                     <label for="amountm3">Amount in cubic meter</label>
-                    <input id="amount" name="amountm3">
-                </input></div>
+                    <input id="amount" name="amountm3"></input>
+                </div>
             </div>
 
             <div id="delivery">
@@ -53,19 +53,20 @@
                 </div>
                 <div class="element">
                     <label for="applyDiscount">Apply discount</label>
-                    <input id="discount" name="applyDiscount">
-                </input></div>
-            </div>
-
-            <div id="price">
-                <div class="element">
-                    <p id="total">Total: </p>
-                    <input type="submit" id="createOrder" value="Create Purchase Order" style="height: 25px; width: 200px;" onclick="createNewOrder()"></input>
+                    <input id="discount" name="applyDiscount"></input>
                 </div>
             </div>
 
-            <div id="successMessageDiv">
-                <p id="successMessage" style="display: inline-block;">
+            <div id="priceContainer">
+                <div id="submitPurchase">
+                    <p id="total">Total: </p>
+                    <input type="submit" id="createOrder" value="Create Purchase Order" style="height: 25px; width: 200px;" onclick="createNewOrder()"></input>
+                
+                    <div id="successMessageDiv">
+                        <p id="successMessage" style="display: inline-block;">
+                    </div>
+                </div>
             </div>
-        </input></input></div>
+
+        </div>
     </div>

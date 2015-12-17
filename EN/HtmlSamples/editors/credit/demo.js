@@ -58,15 +58,18 @@ var listData = ["EUR", "USD", "GBP"];
         });
 
         $("#resultCredit").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#returnValue").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#monthlyPaymentValue").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#form").submit(function (event) {
