@@ -1,5 +1,5 @@
 $(function () {
-			var pasteMode = "Paste data as new records", updates;
+			var pasteMode = "データを新規レコードとして貼り付ける", updates;
 			var grid = $("#grid");
 
 			//editors and buttons
@@ -7,8 +7,8 @@ $(function () {
 				mode: "dropdown",
 				width: "300px",
 				dataSource: [
-                     "Paste data as new records",
-                     "Paste starting from active cell"
+                     "データを新規レコードとして貼り付ける",
+                     "アクティブ セルから開始して貼り付ける"
 				],
 				selectionChanged: function (evt, ui) {
 					if (ui.items.length == 1) {
@@ -149,7 +149,7 @@ $(function () {
 				//process the clipboard data
 				var processedData = ProcessData(data);
 
-				if (pasteMode === "Paste starting from active cell") {
+				if (pasteMode === "アクティブ セルから開始して貼り付ける") {
 					//update starting from selected cell
 					UpdateRecords(processedData);
 				} else {
