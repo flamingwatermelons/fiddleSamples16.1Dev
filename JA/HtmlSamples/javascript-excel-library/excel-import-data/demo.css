@@ -6,12 +6,7 @@
         #sampleContainer input {
             margin: 10px 0;
         }
-
         #result {
             display: none;
             color: red;
         }
-     
-            input.button-style {
-                margin-top: 10px;
-            }

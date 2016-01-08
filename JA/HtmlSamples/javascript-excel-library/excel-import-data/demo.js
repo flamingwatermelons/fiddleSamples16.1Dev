@@ -45,7 +45,7 @@ $(function () {
                         // we can also skip passing the gridColumns use autoGenerateColumns = true, or modify the gridColumns array
                         createGrid(data, gridColumns);
                     }, function (error) {
-                        $("#result").text("The format of the file you have selected is not supported. Please select a valid Excel file ('.xls, *.xlsx').");
+                        $("#result").text("選択のファイル形式がサポートされていません。有効な Excel ファイルを選択してください ('.xls, *.xlsx')。");
                         $("#result").show(1000);
                     });
                 }
@@ -55,7 +55,7 @@ $(function () {
                     if (excelFile.type === "application/vnd.ms-excel" || excelFile.type === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
                         fileReader.readAsArrayBuffer(excelFile);
                     } else {
-                        $("#result").text("The format of the file you have selected is not supported. Please select a valid Excel file ('.xls, *.xlsx').");
+                        $("#result").text("選択のファイル形式がサポートされていません。有効な Excel ファイルを選択してください ('.xls, *.xlsx')。");
                         $("#result").show(1000);
                     }
                 }
