@@ -7,9 +7,7 @@ $(document).ready(function () {
                 }
             });
 
-            $("#serialNumber").igTextEditor({
-                width: "300px"
-            });
+            $("#serialNumber").igTextEditor();
 
             $("#zipCode").igNumericEditor({
                 placeHolder: "00000"
@@ -22,7 +20,6 @@ $(document).ready(function () {
             $("#comment").igTextEditor({
                 textMode: "multiline",
                 height: 100,
-                width: 250,
                 visibleItemsCount: 5
             });
 
@@ -67,6 +64,8 @@ $(document).ready(function () {
                 $("#comment").igTextEditor("option", "value", "");
                 $("#readonly").igCheckboxEditor("option", "checked", false);
                 $("#disable").igCheckboxEditor("option", "checked", false);
+                $("#comment").igTextEditor("option", "disabled", false);
+                $("#comment").igTextEditor("option", "readOnly", false);
             });
         });
 });
