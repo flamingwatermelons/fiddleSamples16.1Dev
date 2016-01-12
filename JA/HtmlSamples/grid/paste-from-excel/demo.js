@@ -89,8 +89,7 @@ $(function () {
 				],
 				features: [
                     {
-                    	name: "Updating",
-                    	startEditTriggers: "dblclick,F2"
+                    	name: "Updating"
                     },
                     {
                     	name: "Selection",
@@ -131,6 +130,23 @@ $(function () {
 				{
 					//on paste (Ctrl+V) move focus to textarea
 					$("#pasteHelper").focus();
+				}
+			});
+
+
+			grid.on("iggridupdatingrowdeleted", function (e, args) {
+				$("#undo").igButton("option", "disabled", false);
+				$("#saveChanges").igButton("option", "disabled", false);
+			});
+
+			grid.on("iggridupdatingrowadded", function (e, args) {
+				$("#undo").igButton("option", "disabled", false);
+				$("#saveChanges").igButton("option", "disabled", false);
+			});
+			grid.on("iggridupdatingeditrowended", function (e, args) {
+				if (args.update) {
+					$("#undo").igButton("option", "disabled", false);
+					$("#saveChanges").igButton("option", "disabled", false);
 				}
 			});
 
