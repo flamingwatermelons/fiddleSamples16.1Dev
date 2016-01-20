@@ -45,14 +45,14 @@ $(function () {
                         // we can also skip passing the gridColumns use autoGenerateColumns = true, or modify the gridColumns array
                         createGrid(data, gridColumns);
                     }, function (error) {
-                        $("#result").text("The format of the file you have selected is not supported. Please select a valid Excel file ('.xls, *.xlsx').");
+                        $("#result").text("The excel file is corrupted.");
                         $("#result").show(1000);
                     });
                 }
 
                 if (this.files.length > 0) {
                     excelFile = this.files[0];
-                    if (excelFile.type === "application/vnd.ms-excel" || excelFile.type === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+                    if (excelFile.type === "application/vnd.ms-excel" || excelFile.type === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || (excelFile.type === "" && (excelFile.name.endsWith("xls") || excelFile.name.endsWith("xlsx")))) {
                         fileReader.readAsArrayBuffer(excelFile);
                     } else {
                         $("#result").text("The format of the file you have selected is not supported. Please select a valid Excel file ('.xls, *.xlsx').");
