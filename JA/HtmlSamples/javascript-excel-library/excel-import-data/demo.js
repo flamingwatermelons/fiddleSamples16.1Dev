@@ -45,7 +45,7 @@ $(function () {
                         // we can also skip passing the gridColumns use autoGenerateColumns = true, or modify the gridColumns array
                         createGrid(data, gridColumns);
                     }, function (error) {
-                        $("#result").text("The excel file is corrupted.");
+                        $("#result").text("Excel ファイルは破損しています。");
                         $("#result").show(1000);
                     });
                 }
