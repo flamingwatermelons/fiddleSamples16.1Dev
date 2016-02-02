@@ -280,12 +280,12 @@ $(function () {
 					}
 
 					if (excessColsCount > 0) {
-						var warning = "You have pasted more columns than are currently available in the grid. The last {count} columns from the pasted data have been disregarded.";
+						var warning = "グリッドに利用可能な列を超える列を貼り付けました。貼り付けたデータの最後の {count} 列は破棄されました。";
 						//PasteWarning
 						rec.igNotifier("notify", "warning", warning.replace("{count}", excessColsCount));
 					} else {
 						//SuccessfullyPasted
-						rec.igNotifier("notify", "success", "Successfully pasted data in the grid.");
+						rec.igNotifier("notify", "success", "データをグリッドに正常に貼り付けました。");
 					}
 
 					rec.focus();

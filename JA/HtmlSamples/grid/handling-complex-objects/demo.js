@@ -1,19 +1,19 @@
 $(function () {
 	var northWindCategoriesJSON = [
-		{ "ID": 0, "Name": "Food" },
-		{ "ID": 1, "Name": "Beverages" },
-		{ "ID": 2, "Name": "Electronics" }
+		{ "ID": 0, "Name": "食品" },
+		{ "ID": 1, "Name": "飲料" },
+		{ "ID": 2, "Name": "電子機器" }
 	];
 	var northwindProductsJSON = [
-		{ "ID": 0, "Name": "Bread", "Description": "Whole grain bread", "ReleaseDate": "\/Date(694224000000)\/", "DiscontinuedDate": null, "Rating": 4, "Price": "2.5", "Category": { "ID": 0, "Name": "Food" } },
-		{ "ID": 1, "Name": "Milk", "Description": "Low fat milk", "ReleaseDate": "\/Date(812505600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "3.5", "Category": { "ID": 1, "Name": "Beverages" } },
-		{ "ID": 2, "Name": "Vint Soda", "Description": "Americana Variety - Mix of 6 flavors", "ReleaseDate": "\/Date(970358400000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "20.9", "Category": { "ID": 1, "Name": "Beverages" } },
-		{ "ID": 3, "Name": "Havina Cola", "Description": "The Original Key Lime Cola", "ReleaseDate": "\/Date(1128124800000)\/", "DiscontinuedDate": "\/Date(1159660800000)\/", "Rating": 3, "Price": "19.9", "Category": { "ID": 1, "Name": "Beverages" } },
-		{ "ID": 4, "Name": "Fruit Punch", "Description": "Mango flavor, 8.3 Ounce Cans (Pack of 24)", "ReleaseDate": "\/Date(1041724800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.99", "Category": { "ID": 1, "Name": "Beverages" } },
-		{ "ID": 5, "Name": "Cranberry Juice", "Description": "16-Ounce Plastic Bottles (Pack of 12)", "ReleaseDate": "\/Date(1154649600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.8", "Category": { "ID": 1, "Name": "Beverages" }, },
-		{ "ID": 6, "Name": "Pink Lemonade", "Description": "36 Ounce Cans (Pack of 3)", "ReleaseDate": "\/Date(1162684800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "18.8", "Category": { "ID": 1, "Name": "Beverages" }, },
-		{ "ID": 7, "Name": "DVD Player", "Description": "1080P Upconversion DVD Player", "ReleaseDate": "\/Date(1163548800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "35.88", "Category": { "ID": 2, "Name": "Electronics" } },
-		{ "ID": 8, "Name": "LCD HDTV", "Description": "42 inch 1080p LCD with Built-in Blu-ray Disc Player", "ReleaseDate": "\/Date(1210204800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "1088.8", "Category": { "ID": 2, "Name": "Electronics" } }
+		{ "ID": 0, "Name": "パン", "Description": "全粒粉パン", "ReleaseDate": "\/Date(694224000000)\/", "DiscontinuedDate": null, "Rating": 4, "Price": "2.5", "Category": { "ID": 0, "Name": "食品" } },
+		{ "ID": 1, "Name": "ミルク", "Description": "低脂肪乳", "ReleaseDate": "\/Date(812505600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "3.5", "Category": { "ID": 1, "Name": "飲料" } },
+		{ "ID": 2, "Name": "ビント ソーダ", "Description": "アメリカン バラエティ - 6 つのフレーバー", "ReleaseDate": "\/Date(970358400000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "20.9", "Category": { "ID": 1, "Name": "飲料" } },
+		{ "ID": 3, "Name": "ハビナ ソーダ", "Description": "元祖ライム ソーダ", "ReleaseDate": "\/Date(1128124800000)\/", "DiscontinuedDate": "\/Date(1159660800000)\/", "Rating": 3, "Price": "19.9", "Category": { "ID": 1, "Name": "飲料" } },
+		{ "ID": 4, "Name": "フルーツ ソーダ", "Description": "マンゴ フレーバー 8.3 オンス缶 (24 パック)", "ReleaseDate": "\/Date(1041724800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.99", "Category": { "ID": 1, "Name": "飲料" } },
+		{ "ID": 5, "Name": "クランベリー ジュース", "Description": "16 オンス ボトル (12 パック)", "ReleaseDate": "\/Date(1154649600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.8", "Category": { "ID": 1, "Name": "飲料" }, },
+		{ "ID": 6, "Name": "ピンク レモネード", "Description": "36 オンス缶 (3 パック)", "ReleaseDate": "\/Date(1162684800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "18.8", "Category": { "ID": 1, "Name": "飲料" }, },
+		{ "ID": 7, "Name": "DVD プレーヤー", "Description": "1080P DVD プレーヤー", "ReleaseDate": "\/Date(1163548800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "35.88", "Category": { "ID": 2, "Name": "電子機器" } },
+		{ "ID": 8, "Name": "LCD HDTV", "Description": "42 インチ 1080p LCD (ブルーレイ プレーヤー内臓)", "ReleaseDate": "\/Date(1210204800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "1088.8", "Category": { "ID": 2, "Name": "電子機器" } }
 	];
 
 	$("#grid").igGrid({
@@ -25,9 +25,9 @@ $(function () {
 		columns: [
 			{ headerText: "", key: "ID", dataType: "number" },
 			{ headerText: "製品名", key: "Name", dataType: "string" },
-			{ headerText: "Description", key: "Description", dataType: "string" },
+			{ headerText: "説明", key: "Description", dataType: "string" },
 			{
-				headerText: "Category", key: "Category", dataType: "object", mapper: function (record) {
+				headerText: "カテゴリ", key: "Category", dataType: "object", mapper: function (record) {
 					return record.Category.Name;
 				}
 			}
