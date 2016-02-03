@@ -273,9 +273,10 @@ $(function () {
 					if (!rec.data("igNotifier")) {
 						rec.igNotifier({
 							mode: "popover",
-							direction: "right",
+							direction: "top",
 							showOn: "manual",
-							position: "start"
+							position: "start",
+							maxWidth: 50 / 100 * grid.width()
 						});
 					}
 
