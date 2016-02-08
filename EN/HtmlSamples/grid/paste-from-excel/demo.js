@@ -202,7 +202,7 @@ $(function () {
 					var cell = $("#grid").igGridSelection("selectedCell");
 
 					if (!cell) {
-						alert("No active cell. Please select a cell from which to beging pasting.");
+					    alert("No active cell. Please select a cell from which to begin pasting.");
 						return;
 					}
 					cell.element.focus();
