@@ -84,11 +84,11 @@ $(function () {
 					dataSourceType: "json",
 					primaryKey: "ID",
 					columns: [
-						{ headerText: "Employee ID", key: "ID", dataType: "number", width: "120px", hidden: true },
-						{ headerText: "Name", key: "Name", dataType: "string" },
-						{ headerText: "Title", key: "Title", dataType: "string" },
-						{ headerText: "Phone", key: "Phone", dataType: "string" },
-						{ headerText: "Country", key: "Country", dataType: "string" }
+						{ headerText: "従業員 ID", key: "ID", dataType: "number", width: "120px", hidden: true },
+						{ headerText: "名前", key: "Name", dataType: "string" },
+						{ headerText: "役職", key: "Title", dataType: "string" },
+						{ headerText: "電話", key: "Phone", dataType: "string" },
+						{ headerText: "国", key: "Country", dataType: "string" }
 					],
 					features: [
 						{
@@ -202,7 +202,7 @@ $(function () {
 					var cell = $("#grid").igGridSelection("selectedCell");
 
 					if (!cell) {
-						alert("No active cell. Please select a cell from which to beging pasting.");
+					    alert("アクティブ セルがありません。貼り付けを開始するセルを選択してください。");
 						return;
 					}
 					cell.element.focus();
