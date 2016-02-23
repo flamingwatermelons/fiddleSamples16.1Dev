@@ -20,7 +20,7 @@ $(function () {
 				],
 				autofitLastColumn: false,
 				features: [
-					{ name: "Paging", pageSize: 3 },
+					{ name: "Paging", pageSize: 5 },
 					{
 						name: "Updating",
 						editMode: "dialog"
