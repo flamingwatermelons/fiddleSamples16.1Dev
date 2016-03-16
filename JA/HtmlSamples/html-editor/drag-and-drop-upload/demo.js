@@ -17,7 +17,7 @@ $(function () {
                 multipleFiles: true,
                 maxUploadedFiles: 3,
                 allowedExtensions: ["gif", "jpg", "bmp", "png", "jpeg"],
-                errorMessageValidatingFileExtension: "$$(ErrorMessageValidatingFileExtensionText)",
+                errorMessageValidatingFileExtension: "ファイル拡張子はサポートされていません。画像ファイルをドラッグしてください。",
                 onError: function (e, args) {
                     showAlert(args);
                 },
