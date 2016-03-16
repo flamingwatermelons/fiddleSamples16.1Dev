@@ -53,7 +53,7 @@ $(function () {
             if ($('#dropZone').length === 0) {
                 $("<div/>", {
                     id: "dropZone",
-                    text: "Drop images here or in the igUpload"
+                    text: "画像をここまたは igUpload にドロップします。"
                 }).appendTo(".igsb-running-sample");
 
                 // Setup the drop listeners.
