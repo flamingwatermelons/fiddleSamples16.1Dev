@@ -23,11 +23,10 @@ $(function () {
 		width:"100%",
 		autoGenerateColumns: false,
 		columns: [
-			{ headerText: "", key: "ID", dataType: "number" },
+			{ headerText: "", key: "ID", dataType: "number", hidden: true },
 			{ headerText: "製品名", key: "Name", dataType: "string" },
 			{ headerText: "説明", key: "Description", dataType: "string" },
-			{
-				headerText: "カテゴリ", key: "Category", dataType: "object", mapper: function (record) {
+			{ headerText: "カテゴリ", key: "Category", dataType: "object", mapper: function (record) {
 					return record.Category.Name;
 				}
 			}

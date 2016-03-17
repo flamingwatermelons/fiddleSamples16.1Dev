@@ -41,6 +41,7 @@ $(function () {
                     { headerText: "市", key: "City", dataType: "string" },
                     { headerText: "国名", key: "Country", dataType: "string", hidden: true }
                 ],
+                primaryKey: "ID",
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 height: "600px",
