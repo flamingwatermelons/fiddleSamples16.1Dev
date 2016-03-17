@@ -23,11 +23,10 @@ $(function () {
 		width:"100%",
 		autoGenerateColumns: false,
 		columns: [
-			{ headerText: "", key: "ID", dataType: "number" },
+			{ headerText: "", key: "ID", dataType: "number", hidden: true },
 			{ headerText: "Product Name", key: "Name", dataType: "string" },
 			{ headerText: "Description", key: "Description", dataType: "string" },
-			{
-				headerText: "Category", key: "Category", dataType: "object", mapper: function (record) {
+			{ headerText: "Category", key: "Category", dataType: "object", mapper: function (record) {
 					return record.Category.Name;
 				}
 			}

@@ -41,6 +41,7 @@ $(function () {
                     { headerText: "City", key: "City", dataType: "string" },
                     { headerText: "Country", key: "Country", dataType: "string", hidden: true }
                 ],
+                primaryKey: "ID",
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 height: "600px",
