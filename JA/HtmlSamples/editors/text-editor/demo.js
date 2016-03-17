@@ -1,7 +1,11 @@
 $(function () {
 $(document).ready(function () {
-            $("#firstName").igTextEditor();
-            $("#lastName").igTextEditor();
+        	$("#firstName").igTextEditor({
+        		placeHolder: "John",
+        	});
+        	$("#lastName").igTextEditor({
+        		placeHolder: "Anderson",
+        	});
 
             $("#email").igTextEditor({
             	placeHolder: "john@email.com",
