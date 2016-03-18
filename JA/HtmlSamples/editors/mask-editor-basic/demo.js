@@ -1,5 +1,5 @@
 $(function () {
-$("#serialNumber").igMaskEditor({
+            $("#serialNumber").igMaskEditor({
                 inputMask: 'AAAA-AAAA-AAAA-AAAA',
                 dataMode: "rawTextWithLiterals"
             });
@@ -20,4 +20,3 @@ $("#serialNumber").igMaskEditor({
                 $("#phone").igMaskEditor("option", "value", "");
             });
         });
-});

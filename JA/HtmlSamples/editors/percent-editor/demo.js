@@ -38,14 +38,14 @@ $(document).ready(function () {
             $("#stateTax").igPercentEditor({
                 buttonType: "spin",
                 spinDelta: 0.01,
-                value: -5.53,
+                value: -5.00,
                 minValue: -5.53,
                 maxValue: 5.53,
                 displayFactor: 1,
                 valueChanged: changingValues
             });
             $("#socialSecurity").igPercentEditor({
-                value: -0.124,
+                value: -0.10,
                 minValue: -0.124,
                 maxValue: 0.124,
                 valueChanged: changingValues
