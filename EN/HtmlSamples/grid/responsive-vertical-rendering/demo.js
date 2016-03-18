@@ -33,7 +33,7 @@ $(function () {
 
             $("#grid7").igGrid({
                 columns: [
-                    { headerText: "Customer ID", key: "ID", dataType: "number", hidden: true },
+                    { headerText: "Customer ID", key: "ID", dataType: "string", hidden: true },
                     { headerText: "Company Name", key: "CompanyName", dataType: "string" },
                     { headerText: "Contact Name", key: "ContactName", dataType: "string" },
                     { headerText: "Contact Title", key: "ContactTitle", dataType: "string" },
@@ -50,7 +50,7 @@ $(function () {
                     {
                         name: "Responsive",
                         enableVerticalRendering: true,
-                        reactOnContainerWidthChanges: true,                   
+                        reactOnContainerWidthChanges: true,
                         windowWidthToRenderVertically: null,
                         propertiesColumnWidth: "40%",
                         valuesColumnWidth: "60%",
@@ -70,10 +70,6 @@ $(function () {
                     {
                         name: "Sorting",
                         type: "local"
-                    },
-                    {
-                    	name: "Selection",
-						persist: false
                     }
                 ]
             });            
