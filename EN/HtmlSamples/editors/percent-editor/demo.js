@@ -10,24 +10,18 @@ $(document).ready(function () {
                 var socialSecurity = $("#socialSecurity").igPercentEditor("value");
                 var medicare = $("#medicare").igPercentEditor("value");
 
-                grossSecurity = calculatePercent(gross, socialSecurity);
-                grossMadicare = calculatePercent(gross, medicare);
+                grossSecurity = gross * socialSecurity;
+                grossMadicare = gross * medicare;
                 gross = gross - (grossSecurity + grossMadicare);
 
 
-                grossFederalTax = calculatePercent(gross, federalTax);
-                grossStateTax = calculatePercent(gross, stateTax);
+                grossFederalTax = (gross * federalTax) / 100;
+                grossStateTax = (gross * stateTax) / 100;
 
                 nett = gross - (grossFederalTax + grossStateTax);
 
                 return parseFloat(nett.toFixed(2));
 
-            }
-
-            function calculatePercent(value, percent) {
-                value = value * percent / 100;
-
-                return value;
             }
 
             function changingValues() {
@@ -51,15 +45,13 @@ $(document).ready(function () {
                 valueChanged: changingValues
             });
             $("#socialSecurity").igPercentEditor({
-                value: -12.4,
-                minValue: -12.4,
-                maxValue: 12.4,
-                displayFactor: 1,
+                value: -0.124,
+                minValue: -0.124,
+                maxValue: 0.124,
                 valueChanged: changingValues
             });
             $("#medicare").igPercentEditor({
-                value: 2.9,
-                displayFactor: 1,
+                value: 0.029,
                 positivePattern: "(n)%",
                 valueChanged: changingValues
             });
