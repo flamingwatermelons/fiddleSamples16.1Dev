@@ -1,10 +1,10 @@
 $(function () {
 $(document).ready(function () {
         	$("#firstName").igTextEditor({
-        		placeHolder: "John",
+        		placeHolder: "ジョン",
         	});
         	$("#lastName").igTextEditor({
-        		placeHolder: "Anderson",
+        		placeHolder: "アンダーソン",
         	});
 
             $("#email").igTextEditor({
