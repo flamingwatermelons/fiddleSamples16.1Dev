@@ -75,10 +75,17 @@ $(function () {
                 data.splice(getCurrentItemState(index).index, 0, generateData(1));
             });
             $(".btn-rmv-curr").click(function () {
-                var index = $("#combo1").igCombo("value");
-                if (index !== null) {
-                	globalIndex = getCurrentItemState(index).index;
-                	data.splice(globalIndex, 1);
+                try {
+                    var index = $("#combo1").igCombo("value");
+
+                    if (index !== null) {
+                        globalIndex = getCurrentItemState(index).index;
+                        data.splice(globalIndex, 1);
+                    }
+                }
+
+                catch (e) {
+                    return;
                 }
 
             });
