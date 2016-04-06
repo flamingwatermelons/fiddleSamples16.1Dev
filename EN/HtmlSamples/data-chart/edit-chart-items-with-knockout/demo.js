@@ -38,13 +38,25 @@ $(function () {
             ko.applyBindings(dynamicModel);
 
             $(".btn-prev").click(function () {
-                var index = $("#combo1").igCombo("value");
-                moveItem(-1, index);
+                try {
+                    var index = $("#combo1").igCombo("value");
+                    moveItem(-1, index);
+                }
+
+                catch (e) {
+                    return;
+                }
             });
 
             $(".btn-next").click(function () {
-                var index = $("#combo1").igCombo("value");
-                moveItem(1, index);
+                try {
+                    var index = $("#combo1").igCombo("value");
+                    moveItem(1, index);
+                }
+
+                catch (e) {
+                    return;
+                }
             });
             $(".btn-play").click(function () {
                 var index = $("#combo1").igCombo("value");
