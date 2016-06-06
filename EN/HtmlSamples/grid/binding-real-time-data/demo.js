@@ -78,15 +78,15 @@ $(function () {
 					var rec = this.stockData[indexesToUpdate[j]];
 					var newValues = generateNewPrice(rec.Price);
 					updatesList[rec.ID].push({ price: newValues.Price });
-					rec.Price = newValues.Price;
-					rec.Change = newValues.ChangePercent;
+					rec.Price = parseFloat(newValues.Price);
+					rec.Change = parseFloat(newValues.ChangePercent);
 
 					$("#grid").igGridUpdating("updateRow", rec.ID, rec);
 					renderCharts(rec.ID);
 
 					//apply additional css to the updated record's Price and Change columns
-					var rec = $("#grid").igGrid("rowById", rec.ID);
-					var spans = rec.find("td[aria-describedby='grid_Price'], td[aria-describedby='grid_Change']").find("span");
+					var row = $("#grid").igGrid("rowById", rec.ID);
+					var spans = row.find("td[aria-describedby='grid_Price'], td[aria-describedby='grid_Change']").find("span");
 					if (newValues.ChangePercent < 0) {
 						spans.addClass("price-down").removeClass("price-down", 2000);
 					} else {
