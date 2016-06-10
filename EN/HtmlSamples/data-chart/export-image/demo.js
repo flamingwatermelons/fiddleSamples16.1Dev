@@ -49,10 +49,18 @@ $(function () {
         });
 
         function ExportImage() {
-            var pngImage = $('#chart').igDataChart("exportImage", 854, 480);
+            var img = $('#chart').igDataChart("exportImage", 854, 480);
 
-            $("<a>")
-                .attr("href", pngImage.src)
-                .attr("download", "img.jpg")
-                [0].click();
+			// atob to base64_decode the data-URI
+			var image_data = atob(img.src.split(',')[1]);
+			
+			// Use typed arrays to convert the binary data to a Blob
+			var arraybuffer = new ArrayBuffer(image_data.length);
+			var view = new Uint8Array(arraybuffer);
+			for (var i=0; i<image_data.length; i++) {
+				view[i] = image_data.charCodeAt(i) & 0xff;
+			}
+	
+			var blob = new Blob([arraybuffer], {type: 'image/jpeg'});
+			saveAs(blob, "img.jpg");
         };
