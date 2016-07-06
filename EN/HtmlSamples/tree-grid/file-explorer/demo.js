@@ -28,10 +28,10 @@ $(function () {
                 {
                     "name": "Pictures", "dateModified": "1/9/2014", "type": "File Folder", "size": 1825, "files": [
                         {
-                            "name": "Jack's Birthday", "dateModified": "6/9/2014", "type": "File Folder", "size": 631, "files": [
-                                { "name": "Picture11.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 493 },
-                                { "name": "Picture12.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 88 },
-                                { "name": "Picture13.gif", "dateModified": "6/9/2014", "type": "GIF File", "size": 50 },
+                            "name": "Jacks Birthday", "dateModified": "6/9/2014", "type": "File Folder", "size": 631, "files": [
+                                { "name": "Picture1.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 493 },
+                                { "name": "Picture2.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 88 },
+                                { "name": "Picture3.gif", "dateModified": "6/9/2014", "type": "GIF File", "size": 50 },
                             ]
                         },
                         {
