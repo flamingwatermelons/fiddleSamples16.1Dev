@@ -7,3 +7,6 @@
 		.rightAlign {
 			text-align:right;
 		}
+		.ui-sparkline {
+		  padding: 0px !important;
+		}
