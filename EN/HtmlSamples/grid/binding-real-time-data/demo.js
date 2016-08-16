@@ -55,11 +55,10 @@ $(function () {
 					renderCharts(this.ID);
 					//apply additional css to the updated record's Price and Change columns
 					var row = $("#grid").igGrid("rowById", this.ID);
-					var tds = row.find("td[aria-describedby='grid_Price'], td[aria-describedby='grid_Change']");
 					if (this.Change < 0) {
-						tds.addClass("price-down").removeClass("price-down", 2000);
+						row.addClass("price-down").removeClass("price-down", 2000);
 					} else {
-						tds.addClass("price-up").removeClass("price-up", 2000);
+						row.addClass("price-up").removeClass("price-up", 2000);
 					}
 				});
 			};
